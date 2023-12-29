@@ -28,7 +28,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #path('Contact/', views.contactUs),
     path('',views.Home),
-    path('blog/',views.blog),
+    path('blog/',views.blog), 
     path('contact/', views.contactUs),
     path('courses/', views.courses),
     path('courses/<slug:courseid>', views.coursesDetails),
