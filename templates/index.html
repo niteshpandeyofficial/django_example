@@ -33,6 +33,15 @@
                     <td>{{d.Phone_No}}</td>
                 </tr>
             {% endfor %}
-
     </table>
+   
+    {% if number|length > 0 %}
+    {% for n in number %}
+        {% if n > 20 %}
+        <div>{{n}}</div>
+        {% endif %}
+    {% endfor %}
+    {% else %}
+        No Data Found
+    {% endif %}
 </html>
