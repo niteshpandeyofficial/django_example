@@ -27,15 +27,15 @@ def Home(request):
 #     return HttpResponse(courseid)
 
 def blog(request):
-    render()
+    return render(request,'index.html')
 
 def certificate(request):
-    render()
+    return render(request,'certificates.html')
 
 def contact(request):
-    render()
+    return render(request,'certificates.html')
 
 def demo(request):
-    render()
-    
+    return render(request,'certificates.html')
+
 
