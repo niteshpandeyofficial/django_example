@@ -24,12 +24,22 @@ from django.contrib import admin
 from django.urls import path,include
 from example1 import views
 
+# urlpatterns = [
+#     path('admin/', admin.site.urls),
+#     #path('Contact/', views.contactUs),
+#     path('',views.Home),
+#     path('blog/',views.blog), 
+#     path('contact/', views.contactUs),
+#     path('courses/', views.courses),
+#     path('courses/<slug:courseid>', views.coursesDetails),
+# ]
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('Contact/', views.contactUs),
     path('',views.Home),
     path('blog/',views.blog), 
-    path('contact/', views.contactUs),
-    path('courses/', views.courses),
-    path('courses/<slug:courseid>', views.coursesDetails),
+    path('certificate/', views.certificate),
+    path('contact/', views.contact),
+    path('demo/', views.demo),
 ]

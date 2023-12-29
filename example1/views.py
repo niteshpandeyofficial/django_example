@@ -15,14 +15,27 @@ def Home(request):
     # return render(request,"index.html",data)
     return render(request,"index.html")
 
-def contactUs(request):
-    return HttpResponse("Welcome to our demo of Django")
+# def contactUs(request):
+#     return HttpResponse("Welcome to our demo of Django")
+# def blog(request):
+#     return HttpResponse("Welcome to our blog page")
+
+# def courses(request):
+#     return HttpResponse("Welcome to our different cources")
+
+# def coursesDetails(request,courseid):
+#     return HttpResponse(courseid)
+
 def blog(request):
-    return HttpResponse("Welcome to our blog page")
+    render()
 
-def courses(request):
-    return HttpResponse("Welcome to our different cources")
+def certificate(request):
+    render()
 
-def coursesDetails(request,courseid):
-    return HttpResponse(courseid)
+def contact(request):
+    render()
+
+def demo(request):
+    render()
+    
 

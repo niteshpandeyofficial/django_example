@@ -1,15 +1,7 @@
-<html>
-<head>
-    <title>{{title}}</title>
-    <style>
-        .main{width:100px;
-        background-color:red;
-        color: white;
-        padding:30px;
-        font-size:30px;
-    }
-    </style>
-</head>
+{% extends 'base.html' %}
+{% block title %}Nitesh Pandey{% endblock %}
+
+{% block content %}
     {% comment %} <div class="main">{{data}}</div> {% endcomment %}
     {% for i in Course_list %}
         <div>{{forloop.revcounter}} {{i}}</div>
@@ -44,4 +36,5 @@
     {% else %}
         No Data Found
     {% endif %}
-</html>
+
+{% endblock %}
