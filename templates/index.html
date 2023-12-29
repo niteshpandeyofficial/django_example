@@ -10,5 +10,29 @@
     }
     </style>
 </head>
-    <div class="main">{{data}}</div>
+    {% comment %} <div class="main">{{data}}</div> {% endcomment %}
+    {% for i in Course_list %}
+        <div>{{forloop.revcounter}} {{i}}</div>
+        {% comment %} <div>{{forloop.first}} {{i}}</div>
+        <div>{{forloop.last}} {{i}}</div>
+        <div>{{forloop.counter}} {{i}}</div>
+        <div>{{forloop.counter0}} {{i}}</div> 
+        <div>{{forloop.revcounter}} {{i}}</div>
+        <div>{{forloop.revcounter0}} {{i}}</div> {% endcomment %}
+    {% endfor %}
+
+    <table border="1" cellpadding="10">
+        <tr>
+            <th>Name</th>
+            <th>Contact_No</th>
+        </tr>
+
+            {% for d in Student_details %}
+                <tr>
+                    <td>{{d.Name}}</td>
+                    <td>{{d.Phone_No}}</td>
+                </tr>
+            {% endfor %}
+
+    </table>
 </html>

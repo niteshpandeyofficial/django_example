@@ -4,7 +4,12 @@ from django.shortcuts import render
 def Home(request):
     data={
         "title":'My Websites',
-        "data":"Hello Dosto Kaise ho aap log"
+        "bdata":"Hello Dosto Kaise ho aap log",
+        "Course_list":['.Net','Python','Java'],
+        "Student_details":[
+            {'Name':'Nitesh',"Phone_No":9234567654},
+            {'Name':'Sam',"Phone_No":7064570330}
+        ]
     }
     return render(request,"index.html",data)
 
