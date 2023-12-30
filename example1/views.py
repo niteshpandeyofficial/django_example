@@ -33,9 +33,19 @@ def certificate(request):
     return render(request,'certificates.html')
 
 def contact(request):
-    return render(request,'certificates.html')
+    return render(request,'contact.html')
 
 def demo(request):
     return render(request,'certificates.html')
+
+def userForm(request):
+    res=0
+    try:
+        n1=int(request.GET.get('Num1'))
+        n2=int(request.GET.get('Num2'))
+        res=n1+n2
+    except Exception as e:
+        print(f'Error Occurred use to {str(e)}') 
+    return render(request,"userForm.html",{'output':res})
 
 

@@ -42,4 +42,5 @@ urlpatterns = [
     path('certificate/', views.certificate),
     path('contact/', views.contact),
     path('demo/', views.demo),
+    path('userForm/', views.userForm),
 ]
