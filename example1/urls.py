@@ -37,7 +37,7 @@ from example1 import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('Contact/', views.contactUs),
-    path('',views.Home),
+    path('',views.Home,name='home_Page'),
     path('blog/',views.blog), 
     path('certificate/', views.certificate),
     path('contact/', views.contact),
