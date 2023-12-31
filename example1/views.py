@@ -1,4 +1,4 @@
-from django.http import HttpResponse
+from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
 
 def Home(request):
@@ -33,19 +33,42 @@ def certificate(request):
     return render(request,'certificates.html')
 
 def contact(request):
-    return render(request,'contact.html')
+    if request.method=='GET':  #to display the data on contact page from userform
+        output=request.GET.get('output')
+
+    return render(request,'contact.html',{'output':output})
 
 def demo(request):
     return render(request,'certificates.html')
 
 def userForm(request):
     res=0
+    data={}
+    
     try:
-        n1=int(request.GET.get('Num1'))
-        n2=int(request.GET.get('Num2'))
-        res=n1+n2
+        if request.method=='POST':
+            # n1=request.GET.get('Num1')
+            # n2=request.GET.get('Num2')
+            #res=int(n1)+int(n2)
+            n1=request.POST.get('Num1')
+            n2=request.POST.get('Num2')
+            print(int(n1)+int(n2))
+            res=int(n1)+int(n2)
+            data={
+                'n1':n1,
+                'n2':n2,
+                'output':res
+            }
+            url='/contact/?output={}'.format(res)
+            return HttpResponseRedirect(url)
+        else:
+            pass
     except Exception as e:
         print(f'Error Occurred use to {str(e)}') 
-    return render(request,"userForm.html",{'output':res})
+    
+
+    return render(request,"userForm.html",data)
+    # return render(request,"userForm.html",data)
+    # return render(request,"userForm.html",{'output':res})
 
 
