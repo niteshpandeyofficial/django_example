@@ -16,10 +16,26 @@ git pull origin master --allow-unrelated-histories(If error occurred during merg
 Python Query
 
 python freeze
-django-admin startproject mysite
+
+step1-Create django project
+django-admin startproject mysite.
+
+step2-when we run below code then bydefault sqllite db created in folder.
 python manage.py runserver
+
+step 3-To change the port of running server
 python manage.py runserver 4000(Port Number)
+
+
 python manage.py createsuperuser
-python manage migrate.py
+
+```
+Create models in django
+python manage.py startup service(name of model) #this snippet create folder with model and other files
+
+python manage.py migration
+python manage.py migrate
+```
+
 
 ```
