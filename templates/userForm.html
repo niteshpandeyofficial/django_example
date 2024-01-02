@@ -8,7 +8,7 @@
 {% block content %}
 
 <div class="container my-5 mx-auto text-center bg-slate-900 text-white">
-    <form action="/userForm/" method="post" class="m-auto w-2/4 text-center">
+    <form  method="post" action='/submitdata/' class="m-auto w-2/4 text-center">
         {% csrf_token %}
         <label for="" class="leading-7 text-sm text-white">First Number</label>
         <input type="number" name="Num1" value="{{n1}}"

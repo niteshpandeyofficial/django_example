@@ -41,6 +41,7 @@ urlpatterns = [
     path('blog/',views.blog), 
     path('certificate/', views.certificate),
     path('contact/', views.contact),
+    path('submitdata/', views.submitdata),
     path('demo/', views.demo),
     path('userForm/', views.userForm),
 ]

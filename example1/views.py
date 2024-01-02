@@ -1,5 +1,6 @@
 from django.http import HttpResponse,HttpResponseRedirect
 from django.shortcuts import render
+from form import UserForms
 
 def Home(request):
     # data={
@@ -37,6 +38,30 @@ def contact(request):
         output=request.GET.get('output')
 
     return render(request,'contact.html',{'output':output})
+
+def submitdata(request):
+    res=0
+    data={}
+    
+    try:
+        if request.method=='POST':
+            # n1=request.GET.get('Num1')
+            # n2=request.GET.get('Num2')
+            #res=int(n1)+int(n2)
+            n1=request.POST.get('Num1')
+            n2=request.POST.get('Num2')
+            print(int(n1)+int(n2))
+            res=int(n1)+int(n2)
+            data={
+                'n1':n1,
+                'n2':n2,
+                'output':res
+            }
+            return HttpResponse(res)
+    except Exception as e:
+        print(f'Error Occurred use to {str(e)}') 
+    
+    
 
 def demo(request):
     return render(request,'certificates.html')

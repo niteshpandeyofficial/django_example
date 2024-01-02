@@ -15,6 +15,8 @@ git pull origin master --allow-unrelated-histories(If error occurred during merg
 ```
 Python Query
 
+python freeze
+django-admin startproject mysite
 python manage.py runserver
 python manage.py runserver 4000(Port Number)
 python manage.py createsuperuser
