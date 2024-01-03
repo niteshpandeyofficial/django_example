@@ -12,6 +12,7 @@ git push origin main
 git pull origin master --allow-unrelated-histories(If error occurred during merging)
 
 ```
+
 ```
 Python Query
 
@@ -28,6 +29,8 @@ python manage.py runserver 4000(Port Number)
 
 
 python manage.py createsuperuser
+
+```
 
 ```
 Create models in django
