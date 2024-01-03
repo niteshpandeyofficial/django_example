@@ -31,11 +31,15 @@ python manage.py createsuperuser
 
 ```
 Create models in django
+
 python manage.py startup service(name of model) #this snippet create folder with model and other files
+add name of the model in setting.py inside installed_app section
+
+add model details in model.py file
 
 python manage.py migration
 python manage.py migrate
+
+add the data in admin.py and find the same details in admin portal from front end
 ```
 
-
-```
